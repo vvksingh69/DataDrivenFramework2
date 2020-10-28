@@ -1,6 +1,7 @@
 package com.company.testcases;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -20,6 +21,8 @@ public class AddCustomerTest extends TestBase{
 		driver.findElement(By.cssSelector(or.getProperty("postcode_CSS"))).sendKeys(postCode);
 		Thread.sleep(2000);
 		driver.findElement(By.cssSelector(or.getProperty("addBtn_CSS"))).click();
+		
+		Assert.fail();
 	}
 	
 	@DataProvider

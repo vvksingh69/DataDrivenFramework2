@@ -2,8 +2,12 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
 <suite name="Data Driven Basics">
-
-
+<listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+       <listener class-name="com.company.listeners.CustomListeners"/>
+      
+  </listeners>
   <test thread-count="5" name=" Bank Manager Login Test">
     <classes>
       <class name="com.company.testcases.BankManagerLoginTest"/>
